@@ -30,12 +30,23 @@
 
     <script src="./asteroidGame/webgl-debug.js"></script>
     <script src="./asteroidGame/gameEngine.js"></script>
+	
+	<script>
+		window.onload = function(){
+			var btnInitGame = document.getElementById('btn-init-game');
+
+			btnInitGame.addEventListener('click', function(evt){
+				btnInitGame.style.display = 'none';
+				initAsteroidGame();
+			});
+		}
+	</script>
 
   </head>
   <body>
 	<canvas id="webGL-interface">
 
 	</canvas>
-	<button onclick="initAsteroidGame()">Init game</button>
+	<button id="btn-init-game">Init game</button>
   </body>
 </html>
